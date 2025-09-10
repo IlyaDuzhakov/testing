@@ -69,7 +69,7 @@ describe("check pay system", () => {
     expect(mir.classList.contains("active")).toBe(true);
   });
   test("check invalid mir", () => {
-    checkMirCard("2201382000000014", mir);
+    checkMirCard("2767658675675675", mir);
     expect(mir.classList.contains("active")).toBe(false);
   });
 });
