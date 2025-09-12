@@ -37,6 +37,7 @@ describe("check pay system", () => {
     expect(visa.classList.contains("active")).toBe(true);
   });
   test("check invalid visa", () => {
+    visa.classList.remove("active");
     checkVisa("4929169365290469569", visa);
     expect(visa.classList.contains("active")).toBe(false);
   });
@@ -45,6 +46,7 @@ describe("check pay system", () => {
     expect(mastercard.classList.contains("active")).toBe(true);
   });
   test("check invalid mastercard", () => {
+    mastercard.classList.remove("active");
     checkMastercard("5517420071750828", mastercard);
     expect(mastercard.classList.contains("active")).toBe(false);
   });
@@ -53,6 +55,7 @@ describe("check pay system", () => {
     expect(american.classList.contains("active")).toBe(true);
   });
   test("check invalid american", () => {
+    american.classList.remove("active");
     checkAmericanCard("346114017230346", american);
     expect(american.classList.contains("active")).toBe(false);
   });
@@ -61,6 +64,7 @@ describe("check pay system", () => {
     expect(discover.classList.contains("active")).toBe(true);
   });
   test("check invalid discover", () => {
+    discover.classList.remove("active");
     checkDiscoverCard("6011251050060577", discover);
     expect(discover.classList.contains("active")).toBe(false);
   });
@@ -69,7 +73,8 @@ describe("check pay system", () => {
     expect(mir.classList.contains("active")).toBe(true);
   });
   test("check invalid mir", () => {
+    mir.classList.remove("active");
     checkMirCard("2767658675675675", mir);
-    expect(mir.classList.contains("active")).toBe(true);
+    expect(mir.classList.contains("active")).toBe(false);
   });
 });
