@@ -1,36 +1,115 @@
-body {
-    color: #999;
-    background-color: rgb(216, 4, 4);
+body { 
+  background-color: rgb(9, 9, 9);
+}
+
+.container {
+  min-height: 80vh;
 }
 
 .card.active {
-    /* background-color:blueviolet; */
-    opacity: 1;
+  opacity: 1;
 }
 
 .card {
-    opacity: 0.5;
-    width: 128px;
-    height: 128px;
+  opacity: 0.5;
+  width: 128px;
+  height: 128px;
 }
 
 .card img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .pictures {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.modal {
+  display: flex;
+  width: 300px;
+  background: #d5eff9;
+  border-radius: 16px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  padding: 20px 20px 16px;
+  align-items: center;
 }
 
 .modal__content {
-    width: 300px;
-    height: 300px;
-    background-color: #fff;
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.errors {
+  font-size: 20px;
+  color: rgb(0, 10, 149);
+  padding-left: 24px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+}
+.close-btn:hover {
+  transform: scale(1.2);
 }
 
 .modal.hidden {
-    display: none;
+  display: none;
 }
 
+.exit {
+  position: absolute;
+  right: 60px;
+  bottom: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.exit:hover {
+  transform: scale(1.2);
+}
+
+.input {
+  margin-top: 40px;
+  width: 250px;
+  height: 25px;
+  padding-left: 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(251, 0, 209, 0.5);
+}
+
+.input:focus,
+.click__validate:hover {
+  box-shadow:
+    0 0 0 2px #00ff37,
+    0 6px 18px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.click__validate {
+  width: 80px;
+  height: 30px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(251, 0, 209, 0.5);
+}

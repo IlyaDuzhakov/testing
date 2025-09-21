@@ -6,6 +6,7 @@ describe("check modal", () => {
         <div class="mastercard card"></div>
         <div class="american card"></div>
         <div class="discover card"></div>
+        <div class="diners card"></div>
         <div class="mir card"></div>
         <input class="input" type="text">
         <button class="click__validate">Нажать</button>

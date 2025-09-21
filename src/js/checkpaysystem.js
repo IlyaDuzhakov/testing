@@ -58,6 +58,42 @@ const checkDiscoverCard = (numberCard, discover) => {
   }
 };
 
+// const checkDinnersCard = (numberCard, dinners) => {
+//   const firstCheck = numberCard.length >= 16 && numberCard.length <= 19;
+//   const firstNumbers = Number(numberCard.slice(0, 2));
+//   const secondCheck =
+//     firstNumbers === 30 ||
+//     firstNumbers === 36 ||
+//     firstNumbers === 38 ||
+//     firstNumbers === 39;
+//   const firstThirdNumbers = numberCard.slice(0, 3);
+//   const thirdCheck = firstThirdNumbers >= 300 && firstThirdNumbers <= 305;
+//   const firstFourNumbers = numberCard.slice(0, 4);
+//   const fourCheck = firstFourNumbers === 3095;
+//   if (
+//     firstCheck &&
+//     secondCheck &&
+//     thirdCheck &&
+//     fourCheck &&
+//     validation(numberCard)
+//   ) {
+//     dinners.classList.add("active");
+//   } else {
+//     dinners.classList.remove("active");
+//   }
+// };
+
+const checkDinersCard = (numberCard, diners) => {
+  const firstCheck = numberCard.length === 14;
+  const firstNumbers = Number(numberCard.slice(0, 2));
+  const secondCheck = firstNumbers === 36;
+  if (firstCheck && secondCheck && validation(numberCard)) {
+    diners.classList.add("active");
+  } else {
+    diners.classList.remove("active");
+  }
+};
+
 const checkMirCard = (numberCard, mir) => {
   const firstCheck = numberCard.length >= 16 && numberCard.length <= 19;
   const firstNumbers = numberCard.slice(0, 4);
@@ -74,5 +110,6 @@ export {
   checkMastercard,
   checkAmericanCard,
   checkDiscoverCard,
+  checkDinersCard,
   checkMirCard,
 };

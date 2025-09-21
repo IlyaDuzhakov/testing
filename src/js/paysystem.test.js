@@ -3,6 +3,7 @@ import {
   checkMastercard,
   checkAmericanCard,
   checkDiscoverCard,
+  checkDinersCard,
   checkMirCard,
 } from "./checkpaysystem";
 
@@ -24,12 +25,13 @@ const mockElement = () => {
 };
 
 describe("check pay system", () => {
-  let visa, mastercard, american, discover, mir;
+  let visa, mastercard, american, discover, diners, mir;
   beforeEach(() => {
     visa = mockElement();
     mastercard = mockElement();
     american = mockElement();
     discover = mockElement();
+    diners = mockElement();
     mir = mockElement();
   });
   test("check visa", () => {
@@ -67,6 +69,15 @@ describe("check pay system", () => {
     discover.classList.remove("active");
     checkDiscoverCard("6011251050060577", discover);
     expect(discover.classList.contains("active")).toBe(false);
+  });
+  test("check diners", () => {
+    checkDinersCard("36456823391810", diners);
+    expect(diners.classList.contains("active")).toBe(true);
+  });
+  test("check invalid diners", () => {
+    diners.classList.remove("active");
+    checkDinersCard("36456823391811", diners);
+    expect(diners.classList.contains("active")).toBe(false);
   });
   test("check mir", () => {
     checkMirCard("2201382000000013", mir);
