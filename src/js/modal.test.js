@@ -12,6 +12,10 @@ describe("check modal", () => {
         <button class="click__validate">Нажать</button>
         <div class="modal hidden"></div>
       </div>
+       <div class="modal hidden">
+      <button class="close-btn">×</button>
+      <span class="exit">Отмена</span>
+    </div>
       `;
   });
   it("check show modal", async () => {
