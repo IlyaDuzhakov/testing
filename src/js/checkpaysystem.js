@@ -70,12 +70,9 @@ const checkDiscoverCard = (numberCard, discover) => {
 //   const thirdCheck = firstThirdNumbers >= 300 && firstThirdNumbers <= 305;
 //   const firstFourNumbers = numberCard.slice(0, 4);
 //   const fourCheck = firstFourNumbers === 3095;
+// const checkFirstNumbers = secondCheck || thirdCheck || fourCheck
 //   if (
-//     firstCheck &&
-//     secondCheck &&
-//     thirdCheck &&
-//     fourCheck &&
-//     validation(numberCard)
+//     firstCheck && validation(numberCard) && checkFirstNumbers
 //   ) {
 //     dinners.classList.add("active");
 //   } else {
