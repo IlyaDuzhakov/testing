@@ -82,4 +82,4 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 .vscode/
-.DS_Store
+*.DS_Store
